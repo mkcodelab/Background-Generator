@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Background Generator</title>
+</head>
+<body>
+
+    <div class="menu">
+        <button class="btn menu-btn" id="bgColor">Bg Color</button>
+        <button class="btn menu-btn" id="shapes">Shapes</button>
+        <button class="btn menu-btn" id="lines">Lines</button>
+        <a href="#" download="myCanvas.png" class="btn menu-btn download-btn" id="downloadBtn">Download</a>
+    </div>
+
+<!-- background -->
+    <div class="standard-menu bg-color-menu menu-off" id="bgColorMenu">
+        <button class="btn btn-close">Close</button>
+        <h1>Choose Background Color</h1>
+
+        <div class="color-pallete flex-center-column">
+            <input type="range" class="range-red range-bar" name="bg-red" id="bgRed" min="0" max="255">
+            <input type="range" class="range-green range-bar" name="bg-green" id="bgGreen" min="0" max="255">
+            <input type="range" class="range-blue range-bar" name="bg-blue" id="bgBlue" min="0" max="255">
+        </div>
+        <button class="btn create-btn" id="createBgColor">Create</button>
+        
+    </div>
+<!-- shapes menu -->
+    <div class="standard-menu shapes-menu menu-off" id="shapesMenu">
+        <button class="btn btn-close">Close</button>
+        <h1>Draw Some Awesome Shapes</h1>
+
+        <div class="shape-wrapper">
+
+            <button class="btn shape-div circles">Circles</button>
+            <button class="btn shape-div squares">Squares</button>
+            <button class="btn shape-div stars">Stars</button>
+        </div>
+
+    </div>
+<!-- lines menu -->
+    <div class="standard-menu lines-menu menu-off" id="linesMenu">
+        <button class="btn btn-close">Close</button>
+        <h1>It's time to draw some Lines!</h1>
+        <button class="btn shape-div straight-lines">Straight Lines</button>
+        <button class="btn shape-div curves">Curves</button>
+    </div>
+
+<!-- shapes submenus -->
+<!-- circles menu -->
+    <div class="standard-menu circles-menu menu-off">
+        <button class="btn btn-close">Close</button>
+        <label for="circles-quantity">Quantity</label>
+        <input type="number" name="circles-quantity" id="circlesQuantity">
+
+        <label for="circles-size">Size</label>
+        <input type="number" name="circles-size" id="circlesSize">
+        
+        <label for="circles-fluct">Size Fluctuation (0 - 50)</label>
+        <input type="range" class="range-bar" name="circles-fluct" id="circlesFluct" min="0" max="50">
+
+        <div class="color-pallete flex-center-column">
+            <p>Color (rgba)</p>
+            <input type="range" class="range-red range-bar" name="circles-red" id="circlesRed" min="0" max="255">
+            <input type="range" class="range-green range-bar" name="circles-green" id="circlesGreen" min="0" max="255">
+            <input type="range" class="range-blue range-bar" name="circles-blue" id="circlesBlue" min="0" max="255">
+            <input type="range" class="range-alpha range-bar" name="circles-alpha" id="circlesAlpha" min="0" max="1" step="0.05">
+        </div>
+        
+        <button class="btn create-btn" id="createCircleShapes">Create</button>
+    </div>
+<!-- squares menu -->
+    <div class="standard-menu squares-menu menu-off">
+        <button class="btn btn-close">Close</button>
+        <label for="squares-quantity">Quantity</label>
+        <input type="number" name="squares-quantity" id="squaresQuantity">
+
+        <label for="squares-size">Size</label>
+        <input type="number" name="squares-size" id="squaresSize">
+        
+        <label for="squares-fluct">Size Fluctuation (0 - 50)</label>
+        <input type="range" class="range-bar" name="squares-fluct" id="squaresFluct" min="0" max="50">
+
+        <label for="squares-angle">Angle</label>
+        <input type="number" name="squares-angle" id="squaresAngle">
+
+        <div class="color-pallete flex-center-column">
+            <p>Color (rgba)</p>
+            <input type="range" class="range-red range-bar" name="squares-red" id="squaresRed" min="0" max="255">
+            <input type="range" class="range-green range-bar" name="squares-green" id="squaresGreen" min="0" max="255">
+            <input type="range" class="range-blue range-bar" name="squares-blue" id="squaresBlue" min="0" max="255">
+            <input type="range" class="range-alpha range-bar" name="squares-alpha" id="squaresAlpha" min="0" max="1" step="0.05">
+        </div>
+
+        <button class="btn create-btn" id="createSquareShapes">Create</button>
+    </div>
+<!-- stars menu-->
+    <div class="stars-menu menu-off">
+
+    </div>
+
+<!-- lines submenus -->
+<!-- straight lines menu -->
+    <div class="standard-menu straight-menu menu-off">
+        <button class="btn btn-close">Close</button>
+        <label for="straightlines-quantity">Quantity</label>
+        <input type="number" name="straightlines-quantity" id="straightlinesQuantity">
+
+        <label for="straightlines-thickness">Line Thickness</label>
+        <input type="number" name="straightlines-thickness" id="straightlinesThickness">
+
+        <div class="color-pallete flex-center-column">
+            <p>Color (rgba)</p>
+            <input type="range" class="range-red range-bar" name="straightlines-red" id="straightlinesRed" min="0" max="255">
+            <input type="range" class="range-green range-bar" name="straightlines-green" id="straightlinesGreen" min="0" max="255">
+            <input type="range" class="range-blue range-bar" name="straightlines-blue" id="straightlinesBlue" min="0" max="255">
+            <input type="range" class="range-alpha range-bar" name="straightlines-alpha" id="straightlinesAlpha" min="0" max="1" step="0.05">
+        </div>
+        <button class="btn create-btn" id="createStraightLines">Create</button>
+    </div>
+
+<!-- curves menu -->
+    <div class="standard-menu curves-menu menu-off">
+
+    </div>
+    
+    <canvas id="canvas1"></canvas>
+    <script src="main.js"></script>
+</body>
+</html>
