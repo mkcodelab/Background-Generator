@@ -11,6 +11,9 @@
     --bg-color2: rgba(120, 120, 120, 0.5);
     --bg-purple: rgba(100, 0, 150, 0.2);
 }
+h1 {
+    text-align: center;
+}
 .flex-center-column{
     display: flex;
     justify-content: center;
@@ -25,8 +28,8 @@ body{
     border: 2px solid var(--border-color);
     border-radius: 5px;
     background: var(--bg-color2);
-    width: 5%;
-    height: 20%;
+    padding: 1rem;
+   
     position: absolute;
     top: 0;
     left: 0;
@@ -47,7 +50,7 @@ body{
     border-radius: 5px;
 }
 .menu-btn{
-    width: 90%;
+    width: 100%;
 }
 .btn:hover{
     color: gold;
@@ -190,4 +193,14 @@ input[type=range] {
 }
 .range-alpha::-webkit-slider-runnable-track{
     background: #999;
+}
+
+@media screen and (max-width: 500px) {
+    .standard-menu {
+        width: 90%;
+    }
+    .color-pallete {
+        width: 90%;
+        padding: .5rem;
+    }
 }

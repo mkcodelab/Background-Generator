@@ -87,7 +87,7 @@ function createCircleShapes(quantity, size, color, fluct){
        ctx.fill();
        ctx.closePath();
     //    console.log('size fluctuation: '+sizeFluct);
-       console.log('calculated size: '+calcSize);
+    //    console.log('calculated size: '+calcSize);
    }
 
    
